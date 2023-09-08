@@ -1,13 +1,10 @@
 const MovieList = ({}) => {
-  const movies = [];
+  const movies = ["Princess Bride", "Forrest Gump", "Iron Man"];
+  const movieItems = movies.map((movie) => <div>{movie}</div>);
   return (
     <div>
       <h4>My Movies</h4>
-      <div>
-        <div>Princess Bride</div>
-        <div>Forrest Gump</div>
-        <div>Iron Man</div>
-      </div>
+      <div>{movieItems}</div>
     </div>
   );
 };
