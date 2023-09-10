@@ -1,6 +1,11 @@
+import React, { useState } from "react";
+
 const movieItem = ({ title }) => {
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  console.log(isFavorite);
   const handleClick = (e) => {
-    console.log(e);
+    setIsFavorite(!isFavorite);
   };
 
   return (
