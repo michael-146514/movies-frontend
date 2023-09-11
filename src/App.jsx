@@ -3,10 +3,15 @@ import Header from "./components/Header/Header";
 import MovieList from "./components/MovieList/MovieList";
 import MovieInfo from "./components/MovieInfo/MovieInfo";
 import NewMovieForm from "./components/NewMovieForm/NewMovieForm";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import initData from "./data/data";
 
 function App() {
   const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    setMovies(initData);
+  }, []);
 
   const handleNewMovie = (newMovie) => {
     const updatedMovies = [...movies, newMovie];
