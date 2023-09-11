@@ -5,6 +5,7 @@ const MovieList = ({}) => {
   const movieItems = movies.map((movie) => (
     <MovieItem key={movie} title={movie} />
   ));
+
   return (
     <div className="flex-item">
       <h4>My Movies</h4>

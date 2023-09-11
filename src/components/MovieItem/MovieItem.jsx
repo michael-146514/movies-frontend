@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import "./MovieItem.css";
 
-const movieItem = ({ title }) => {
+const MovieItem = ({ title }) => {
   const [isFavorite, setIsFavorite] = useState(false);
 
   console.log(isFavorite);
@@ -8,12 +9,16 @@ const movieItem = ({ title }) => {
     setIsFavorite(!isFavorite);
   };
 
+  const btnClass = isFavorite ? "active-btn" : "";
+
   return (
     <div className="movie-item">
       <span>{title}</span>
-      <button onClick={handleClick}>Favorite</button>
+      <button className={btnClass} onClick={handleClick}>
+        Favorite
+      </button>
     </div>
   );
 };
 
-export default movieItem;
+export default MovieItem;
